@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | TechSachWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+
+        <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("nav-active");
+    }
+  </script>
+
+<!-- ================= Scroll animation ================= -->
+
+
+  <script>
+  // Scroll animation
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(section => {
+      const windowHeight = window.innerHeight;
+      const elementTop = section.getBoundingClientRect().top;
+      const visiblePoint = 100;
+
+      if (elementTop < windowHeight - visiblePoint) {
+        section.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+</script>
+
+<script>
+  function toggleFooterTheme() {
+    document.querySelector(".footer-advanced")
+      .classList.toggle("footer-light");
+  }
+</script>
+
+
+
+<!-- ================= SCROLL TO TOP BUTTON ================= -->
+<button id="scrollTopBtn" title="Go to top">
+  ↑
+</button>
+  
+<script>
+  // Get button
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Show button when scrolling down
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to top smoothly
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="logo.jpeg" alt="TechSachWeb Logo">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- ================= PRELOADER js ================= -->
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
+</script>
+
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.jpeg" alt="TechSachWeb">
+    <span>TechSachWeb</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <a href="https://wa.me/918104054266" class="nav-btn" target="_blank">Get a Website</a>
+</header>
+
+<main>
+
+<!-- ================= CONTACT HERO ================= -->
+<!-- ================= CONTACT HERO ================= -->
+<section class="contact-hero">
+  <div class="contact-hero-content">
+  <h1>Let’s Work Together</h1>
+  <p>Tell us about your project and we’ll get back to you quickly.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-page">
+  
+
+  <!-- LEFT INFO -->
+  <div class="contact-info reveal">
+    
+    <h2>Get in Touch</h2>
+    <p>
+      We help businesses grow with modern websites and web applications.
+      Feel free to contact us anytime.
+    </p>
+
+    <ul>
+      <li><i class="fas fa-envelope"></i> techsachweb@gmail.com</li>
+      <li><i class="fas fa-location-dot"></i> India</li>
+      <li><a href="https://wa.me/918104054266" target="_blank"><i class="fab fa-whatsapp"></i></a>click on whatsapp</li>
+    </ul>
+
+    <div class="contact-socials">
+      <a href="https://www.instagram.com/techsach_web" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/918104054266" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="contact-form-box reveal">
+    <h2>Send a Message</h2>
+
+    <form
+      action="https://formspree.io/f/mpqplkrd"
+      method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Project Type (Website / App)">
+      <input type="number" name="number" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="Tell us about your project" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="contact-cta">
+  <h2>Need a Website Fast?</h2>
+  <p>Chat directly with us on WhatsApp.</p>
+  <a href="https://wa.me/918104054266" target="_blank" class="btn-accent">
+    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+</section>
+
+</main>
+
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a 
+  href="https://wa.me/918104054266" 
+  target="_blank"
+  id="whatsappBtn"
+  title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const whatsappBtn = document.getElementById("whatsappBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling DOWN → show WhatsApp
+      whatsappBtn.classList.remove("whatsapp-hide");
+    } else {
+      // Scrolling UP → hide WhatsApp
+      whatsappBtn.classList.add("whatsapp-hide");
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
+
+<!-- ================= ADVANCED FOOTER ================= -->
+
+<footer class="footer-advanced">
+
+    <button class="theme-toggle" onclick="toggleFooterTheme()">
+  🌙 Toggle Footer Theme
+</button>
+
+    
+
+  <!-- Footer Top -->
+  <div class="footer-container">
+
+    <!-- BRAND INFO -->
+    <div class="footer-col">
+      <h3>TechSachWeb</h3>
+      <p>
+        We design and develop modern, fast and responsive websites
+        that help businesses grow online.
+      </p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Business Websites</li>
+        <li>E-Commerce Websites</li>
+        <li>Web Applications</li>
+        <li>Landing Pages</li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+  <h4>Quick Links</h4>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <!-- Legal pages (Point 5) -->
+     <li><a href="about.html">About</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms & Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+</div>
+
+    <!-- CONTACT INFO -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📧 techsachweb@gmail.com</li>
+        <li>📍 India</li>
+      </ul>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/techsach_web?igsh=NGpydXdsajF1N2F1"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/918104054266"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>Subscribe for updates & offers</p>
+
+      <form 
+        class="newsletter"
+        action="https://formspree.io/f/mpqplkrd"
+        method="POST">
+
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+  <p>
+    © <span id="year"></span> TechSachWeb. All Rights Reserved.
+  </p>
+</div>
+
+</footer>
+
+<!-- ================= Auto update footer year ================= -->
+
+<script>
+  // Auto update footer year (SAFE)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* ================= LEGAL PAGE LAYOUT ================= */
+
+/* Space below sticky navbar */
+main {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* ================= LEGAL BACKGROUND ================= */
+
+/* Use section instead of body to avoid conflict */
+.legal-page {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-blue),
+    var(--primary-blue)
+  );
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+/* ================= CONTENT CARD ================= */
+
+.legal-container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= HEADINGS ================= */
+
+.legal-container h1 {
+  font-size: 36px;
+  color: var(--secondary-blue);
+  margin-bottom: 25px;
+  border-left: 6px solid var(--accent-yellow);
+  padding-left: 15px;
+}
+
+.legal-container h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  color: var(--primary-blue);
+}
+
+/* ================= TEXT ================= */
+
+.legal-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+/* ================= LISTS ================= */
+
+.legal-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.legal-container ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+/* ================= LINKS ================= */
+
+.legal-container a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-container a:hover {
+  color: var(--accent-orange);
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-home {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 22px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-yellow),
+    var(--accent-orange)
+  );
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .legal-container {
+    padding: 30px;
+  }
+
+  .legal-container h1 {
+    font-size: 28px;
+  }
+}
+
+
+/* Cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.about-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+/* Tech list */
+.tech-list {
+  margin-top: 20px;
+}
+
+.tech-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Process */
+.process {
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.process-step {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Why list */
+.why-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}

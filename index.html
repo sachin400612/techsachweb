@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title -->
+  <title>TechSachWeb – Professional Websites</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <!-- ================= SEO META TAGS ================= -->
+
+<!-- Primary Meta -->
+<title>TechSachWeb | Professional Website & Web Application Development</title>
+<meta name="description" content="TechSachWeb builds modern, fast and responsive websites, web applications, landing pages and e-commerce solutions for businesses.">
+<meta name="keywords" content="TechSachWeb, website development, web developer, web design, business website, ecommerce website, landing page">
+<meta name="author" content="TechSachWeb">
+
+<!-- Open Graph (For WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:title" content="TechSachWeb – Professional Websites & Web Applications">
+<meta property="og:description" content="We build modern, fast and user-friendly websites to grow your business online.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.techsachweb.com">
+<meta property="og:image" content="https://www.techsachweb.com/logo.jpeg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TechSachWeb – Professional Web Development">
+<meta name="twitter:description" content="Modern & responsive websites for businesses.">
+<meta name="twitter:image" content="https://www.techsachweb.com/logo.jpeg">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("nav-active");
+    }
+  </script>
+
+<!-- ================= Scroll animation ================= -->
+
+
+  <script>
+  // Scroll animation
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(section => {
+      const windowHeight = window.innerHeight;
+      const elementTop = section.getBoundingClientRect().top;
+      const visiblePoint = 100;
+
+      if (elementTop < windowHeight - visiblePoint) {
+        section.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+</script>
+
+<script>
+ function toggleFooterTheme() {
+  // Toggle footer color
+  document.querySelector(".footer-advanced")
+    .classList.toggle("footer-light");
+
+  // Toggle background color
+  document.body.classList.toggle("light-bg");
+}
+</script>
+
+
+
+<!-- ================= SCROLL TO TOP BUTTON ================= -->
+<button id="scrollTopBtn" title="Go to top">
+  ↑
+</button>
+  
+<script>
+  // Get button
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Show button when scrolling down
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to top smoothly
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
+
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="logo.jpeg" alt="TechSachWeb Logo">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- ================= PRELOADER js ================= -->
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
+</script>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logo.jpeg" alt="TechSachWeb Logo">
+      <span>TechSachWeb</span>
+    </div>
+
+    <!-- Hamburger icon (mobile only) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="https://wa.me/918104054266" class="nav-btn" target="_blank">Get a Website</a>
+
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+
+   <section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-text">
+    <h1 class="hero-title">
+      Professional Websites & Web Applications
+    </h1>
+
+    <p class="hero-desc">
+      We build modern, fast and user-friendly websites to grow your business online.
+    </p>
+
+    <a href="contact.html" class="btn-accent hero-btn" target="_blank">Start Your Project</a>
+
+    
+  </div>
+</section>
+
+
+  <!-- ================= WHO WE BUILD FOR ================= -->
+<section class="build-for reveal-group">
+
+  <h2>Who We Build For</h2>
+  <p class="build-sub">
+    We create digital solutions for every stage of business.
+  </p>
+
+  <div class="build-grid">
+
+    <div class="build-card reveal-item">
+      <i class="fas fa-rocket"></i>
+      <h3>Startups</h3>
+      <p>Launch fast with modern, scalable websites.</p>
+    </div>
+
+    <div class="build-card reveal-item">
+      <i class="fas fa-briefcase"></i>
+      <h3>Small Businesses</h3>
+      <p>Professional websites to grow your local presence.</p>
+    </div>
+
+    <div class="build-card reveal-item">
+      <i class="fas fa-shopping-cart"></i>
+      <h3>E-Commerce Brands</h3>
+      <p>High-converting online stores with secure payments.</p>
+    </div>
+
+    <div class="build-card reveal-item">
+      <i class="fas fa-building"></i>
+      <h3>Enterprises</h3>
+      <p>Custom web applications for large-scale needs.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ================= WHO WE BUILD FOR js ================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const items = document.querySelectorAll(".reveal-item");
+
+  function animateBuildFor() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    items.forEach((item, index) => {
+      const boxTop = item.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        setTimeout(() => {
+          item.classList.add("active");
+        }, index * 200); // stagger animation
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateBuildFor);
+
+  // 🔥 IMPORTANT: run once on load
+  animateBuildFor();
+});
+</script>
+
+
+
+<!-- ================= WEBSITE BUILD PROCESS SECTION ================= -->
+<section class="build-process">
+
+  <!-- Section heading -->
+  <h2>How Your Website Is Built</h2>
+  <p class="sub-text">Transparent process from idea to launch</p>
+
+  <!-- Main card -->
+  <div class="process-card">
+
+    <!-- Individual steps -->
+    <div class="step active">
+      <span>📋</span> Requirement Received
+    </div>
+
+    <div class="step">
+      <span>🎨</span> Design in Progress
+    </div>
+
+    <div class="step">
+      <span>💻</span> Development Ongoing
+    </div>
+
+    <div class="step">
+      <span>🧪</span> Testing & Review
+    </div>
+
+    <div class="step">
+      <span>🚀</span> Website Live
+    </div>
+
+    <!-- Progress bar container -->
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <!-- Status text -->
+    <p class="status">Processing...</p>
+
+  </div>
+</section>
+
+
+<script>
+  /* ================= REPEATING WEBSITE BUILD ANIMATION ================= */
+
+  const steps = document.querySelectorAll(".step");
+  const progress = document.querySelector(".progress-fill");
+  const status = document.querySelector(".status");
+
+  let currentStep = 0;
+
+  function animateProcess() {
+
+    // If steps are remaining
+    if (currentStep < steps.length) {
+
+      steps[currentStep].classList.add("active");
+
+      progress.style.width =
+        ((currentStep + 1) / steps.length) * 100 + "%";
+
+      currentStep++;
+
+    } else {
+
+      // Show final status briefly
+      status.innerText = "Website Successfully Launched 🚀";
+
+      // Pause before restarting
+      setTimeout(resetAnimation, 1500);
+    }
+  }
+
+  function resetAnimation() {
+
+    // Remove active state from all steps
+    steps.forEach(step => step.classList.remove("active"));
+
+    // Reset progress bar
+    progress.style.width = "0%";
+
+    // Reset status
+    status.innerText = "Processing...";
+
+    // Reset step counter
+    currentStep = 0;
+  }
+
+  // Run animation every 1.2 seconds
+  setInterval(animateProcess, 1500);
+</script>
+
+
+  <!-- ================= WHY CHOOSE ================= -->
+
+  <!-- ================= WHY CHOOSE ================= -->
+<section class="why reveal">
+  <div class="why-bg"></div>
+  <h2>Why Choose <span>TechSachWeb</span></h2>
+  <p class="why-subtitle">
+    We don’t just build websites — we build digital experiences that grow businesses.
+  </p>
+
+  <div class="why-cards">
+
+    <div class="why-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Clean & Modern UI/UX</h3>
+      <p>Visually appealing designs focused on usability and conversions.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile-First Design</h3>
+      <p>Perfect experience on mobile, tablet and desktop devices.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-rocket"></i>
+      <h3>Fast Delivery</h3>
+      <p>Quick turnaround without compromising on quality.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-wallet"></i>
+      <h3>Affordable Pricing</h3>
+      <p>Premium websites at startup-friendly pricing.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ================= PORTFOLIO ================= -->
+
+  <section class="portfolio reveal">
+    <h2>My Work</h2>
+    <br>
+
+    <div class="portfolio-box">
+      <h3>PKSTOP Website</h3>
+      <p>Real business website built for online services.</p>
+      <a href="https://www.pkstop.com" target="_blank">Visit Website</a>
+    </div>
+  </section>
+
+
+  <!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials reveal">
+
+  <h2>What Our Clients Say</h2>
+  <p class="testimonials-sub">
+    Real feedback from businesses we’ve worked with.
+  </p>
+
+  <div class="testimonial-slider">
+
+    <div class="testimonial active">
+      <p>
+        “TechSachWeb built my website exactly how I wanted.
+          Fast delivery and very professional work.”
+      </p>
+      <h4>PKSTOP</h4>
+      <span>Business Website</span>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “Clean design, mobile friendly and great support.
+          Highly recommended for startups.”
+      </p>
+      <h4>Startup Client</h4>
+      <span>Landing Page</span>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “Affordable pricing with premium quality.
+          Very smooth experience from start to launch.”
+      </p>
+      <h4>Local Business</h4>
+      <span>Business Website</span>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= TESTIMONIALS js ================= -->
+
+<script>
+  const testimonials = document.querySelectorAll(".testimonial");
+  let currentTestimonial = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach(t => t.classList.remove("active"));
+    testimonials[index].classList.add("active");
+  }
+
+  setInterval(() => {
+    currentTestimonial =
+      (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }, 4000); // change slide every 4s
+</script>
+
+
+<!-----------------------------------Timepass Game -------------------------->
+<!-----------------------------------Timepass Game ------------------------------>
+
+<section class="web-game">
+  <h1>For Fun 😃</h1>
+  <h2>Build a Website – Mini Game</h2>
+  <p>Arrange the steps in the correct order</p>
+
+  <div class="game-steps">
+    <button onclick="selectStep('design')">Design UI</button>
+    <button onclick="selectStep('domain')">Choose Domain</button>
+    <button onclick="selectStep('launch')">Launch Website</button>
+    <button onclick="selectStep('develop')">Develop Website</button>
+    <button onclick="selectStep('content')">Add Content</button>
+  </div>
+
+  <p class="game-status" id="gameStatus">Start building your website 👇</p>
+</section>
+
+
+<script>
+  const correctOrder = [
+    "domain",
+    "design",
+    "develop",
+    "content",
+    "launch"
+  ];
+
+  let userOrder = [];
+
+  function selectStep(step) {
+    if (userOrder.includes(step)) return;
+
+    userOrder.push(step);
+
+    if (step !== correctOrder[userOrder.length - 1]) {
+      document.getElementById("gameStatus").innerText =
+        "❌ Wrong order! Try again.";
+      userOrder = [];
+      return;
+    }
+
+    if (userOrder.length === correctOrder.length) {
+      document.getElementById("gameStatus").innerText =
+        "🎉 Website Built Successfully!";
+      userOrder = [];
+    } else {
+      document.getElementById("gameStatus").innerText =
+        "Good! Next step…";
+    }
+  }
+</script>
+
+
+  <!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact reveal">
+  <h2>Contact Me</h2>
+  <p>Have a project in mind? Let’s work together.</p>
+
+  <!-- ================= CONTACT FORM ================= -->
+<form 
+  class="contact-form"
+  action="https://formspree.io/f/mpqplkrd"
+  method="POST">
+
+  <!-- User Name -->
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <!-- User Email -->
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <!-- Message -->
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit">Send Message</button>
+</form>
+
+  <!-- WhatsApp Button -->
+  <a 
+    href="https://wa.me/918104054266" 
+    target="_blank" 
+    class="whatsapp-btn">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a 
+  href="https://wa.me/918104054266" 
+  target="_blank"
+  id="whatsappBtn"
+  title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const whatsappBtn = document.getElementById("whatsappBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling DOWN → show WhatsApp
+      whatsappBtn.classList.remove("whatsapp-hide");
+    } else {
+      // Scrolling UP → hide WhatsApp
+      whatsappBtn.classList.add("whatsapp-hide");
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
+
+<!-- ================= ADVANCED FOOTER ================= -->
+
+<footer class="footer-advanced">
+
+
+  
+
+    <button class="theme-toggle" onclick="toggleFooterTheme()">
+  🌙 Toggle Footer Theme
+</button>
+
+    
+
+  <!-- Footer Top -->
+  <div class="footer-container">
+
+    <!-- BRAND INFO -->
+    <div class="footer-col">
+      <h3>TechSachWeb</h3>
+      <p>
+        We design and develop modern, fast and responsive websites
+        that help businesses grow online.
+      </p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Business Websites</li>
+        <li>E-Commerce Websites</li>
+        <li>Web Applications</li>
+        <li>Landing Pages</li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+  <h4>Quick Links</h4>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <!-- Legal pages (Point 5) -->
+     <li><a href="about.html">About</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms & Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+</div>
+
+    <!-- CONTACT INFO -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📧 techsachweb@gmail.com</li>
+        <li>📍 India</li>
+      </ul>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/techsach_web?igsh=NGpydXdsajF1N2F1"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/918104054266"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>Subscribe for updates & offers</p>
+
+      <form 
+        class="newsletter"
+        action="https://formspree.io/f/mpqplkrd"
+        method="POST">
+
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+  <p>
+    © <span id="year"></span> TechSachWeb. All Rights Reserved.
+  </p>
+</div>
+
+</footer>
+
+<!-- ================= Auto update footer year ================= -->
+
+<script>
+  // Auto update footer year (SAFE)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  });
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

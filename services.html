@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title -->
+  <title>Services | TechSachWeb</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <!-- ================= SEO META TAGS ================= -->
+
+<!-- Primary Meta -->
+<title>TechSachWeb | Professional Website & Web Application Development</title>
+<meta name="description" content="TechSachWeb builds modern, fast and responsive websites, web applications, landing pages and e-commerce solutions for businesses.">
+<meta name="keywords" content="TechSachWeb, website development, web developer, web design, business website, ecommerce website, landing page">
+<meta name="author" content="TechSachWeb">
+
+<!-- Open Graph (For WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:title" content="TechSachWeb – Professional Websites & Web Applications">
+<meta property="og:description" content="We build modern, fast and user-friendly websites to grow your business online.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.techsachweb.com">
+<meta property="og:image" content="https://www.techsachweb.com/logo.jpeg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TechSachWeb – Professional Web Development">
+<meta name="twitter:description" content="Modern & responsive websites for businesses.">
+<meta name="twitter:image" content="https://www.techsachweb.com/logo.jpeg">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+  <!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="logo.jpeg" alt="TechSachWeb Logo">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- ================= PRELOADER js ================= -->
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
+</script>
+    
+
+<!-- ================= NAVBAR (SAME AS HOME) ================= -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.jpeg" alt="TechSachWeb">
+    <span>TechSachWeb</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="https://wa.me/918104054266" class="nav-btn" target="_blank">Get a Website</a>
+</header>
+
+<main>
+
+<!-- ================= SERVICES HERO ================= -->
+<section class="services-hero">
+  <h1>Our Services</h1>
+  <p>Everything you need to build, launch & grow online.</p>
+</section>
+
+<!-- ================= SERVICES GRID ================= -->
+<section class="services-page">
+
+  <div class="service-box reveal">
+    <i class="fas fa-briefcase"></i>
+    <h3>Business Websites</h3>
+    <p>
+      Professional, responsive websites designed to build trust
+      and convert visitors into customers.
+    </p>
+    <ul>
+      <li>✔ Mobile Responsive</li>
+      <li>✔ SEO Friendly</li>
+      <li>✔ Fast Loading</li>
+    </ul>
+  </div>
+
+  <div class="service-box reveal">
+    <i class="fas fa-shopping-cart"></i>
+    <h3>E-Commerce Websites</h3>
+    <p>
+      Secure online stores with payment gateway integration
+      and easy product management.
+    </p>
+    <ul>
+      <li>✔ Razorpay / Stripe</li>
+      <li>✔ Product Dashboard</li>
+      <li>✔ Order Management</li>
+    </ul>
+  </div>
+
+  <div class="service-box reveal">
+    <i class="fas fa-code"></i>
+    <h3>Web Applications</h3>
+    <p>
+      Custom web apps tailored to your business logic
+      and workflow.
+    </p>
+    <ul>
+      <li>✔ Admin Panel</li>
+      <li>✔ Secure Backend</li>
+      <li>✔ Scalable Code</li>
+    </ul>
+  </div>
+
+  <div class="service-box reveal">
+    <i class="fas fa-bullseye"></i>
+    <h3>Landing Pages</h3>
+    <p>
+      High-converting landing pages for ads,
+      campaigns and product launches.
+    </p>
+    <ul>
+      <li>✔ Conversion Focused</li>
+      <li>✔ Fast Load</li>
+      <li>✔ CTA Optimized</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="services-cta">
+  <h2>Ready to Start Your Project?</h2>
+  <p>Let’s build something powerful together.</p>
+  <a href="contact.html" class="btn-accent">Start Your Project</a>
+</section>
+
+</main>
+
+
+<!-- ================= JS ================= -->
+<script>
+  // Toggle mobile menu
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("nav-active");
+  }
+
+  // Scroll reveal
+  function revealOnScroll() {
+    document.querySelectorAll(".reveal").forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<button id="scrollTopBtn" title="Go to top">
+  ↑
+</button>
+  
+<script>
+  // Get button
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Show button when scrolling down
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to top smoothly
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
+  <script>
+ function toggleFooterTheme() {
+  // Toggle footer color
+  document.querySelector(".footer-advanced")
+    .classList.toggle("footer-light");
+
+  // Toggle background color
+  document.body.classList.toggle("light-bg");
+}
+</script>
+
+
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a 
+  href="https://wa.me/918104054266" 
+  target="_blank"
+  id="whatsappBtn"
+  title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const whatsappBtn = document.getElementById("whatsappBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling DOWN → show WhatsApp
+      whatsappBtn.classList.remove("whatsapp-hide");
+    } else {
+      // Scrolling UP → hide WhatsApp
+      whatsappBtn.classList.add("whatsapp-hide");
+    }
+
+    lastScrollY = window.scrollY;
+  });
+</script>
+
+
+<!-- ================= ADVANCED FOOTER ================= -->
+
+
+<footer class="footer-advanced">
+
+    <button class="theme-toggle" onclick="toggleFooterTheme()">
+  🌙 Toggle Footer Theme
+</button>
+
+    
+
+  <!-- Footer Top -->
+  <div class="footer-container">
+
+    <!-- BRAND INFO -->
+    <div class="footer-col">
+      <h3>TechSachWeb</h3>
+      <p>
+        We design and develop modern, fast and responsive websites
+        that help businesses grow online.
+      </p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Business Websites</li>
+        <li>E-Commerce Websites</li>
+        <li>Web Applications</li>
+        <li>Landing Pages</li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+  <h4>Quick Links</h4>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <!-- Legal pages (Point 5) -->
+     <li><a href="about.html">About</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms & Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+</div>
+
+    <!-- CONTACT INFO -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📧 techsachweb@gmail.com</li>
+        <li>📍 India</li>
+      </ul>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/techsach_web?igsh=NGpydXdsajF1N2F1"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/918104054266"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>Subscribe for updates & offers</p>
+
+      <form 
+        class="newsletter"
+        action="https://formspree.io/f/mpqplkrd"
+        method="POST">
+
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+  <p>
+    © <span id="year"></span> TechSachWeb. All Rights Reserved.
+  </p>
+</div>
+
+</footer>
+
+<!-- ================= Auto update footer year ================= -->
+
+<script>
+  // Auto update footer year (SAFE)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  });
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
